@@ -1,0 +1,113 @@
+/*通用样式*/
+body{
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+a,a:hover{
+    color: #333;
+    text-decoration: none;
+}
+
+/*顶部*/
+#header{
+    height: 50px;
+    line-height: 50px;
+}
+
+img#appImg{
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 1021;
+}
+
+#headerLeft:hover img#appImg{
+    display: block;
+}
+
+/*导航*/
+#myNavContent li.nav-item.active a,#myNavContent a.nav-link:hover{
+    color:#dc3545;
+}
+
+/*轮播*/
+.banner_item{
+    height: 400px;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+/*产品*/
+#proTt{
+    overflow-x: auto;
+}
+
+a.pro_item{
+    display: block;
+}
+
+a.pro_item:hover{
+    box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+}
+
+/*资讯*/
+#newsTt::after{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #CCC;
+    bottom:-4px;
+    right:-4px;
+    background: #FFF;
+}
+
+#newsNav>li>a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #CCC;
+    color:#FFF;
+    font-size: 24px;
+}
+
+#newsNav>li>a.active,#newsNav>li>a:hover{
+    background-color: #dc3545;
+}
+
+@media (min-width: 768px) {
+    #newsNav::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        top:0;
+        left:50%;
+        border-left:1px dashed #CCC;
+        z-index: -1;
+    }
+}
+
+/*底部*/
+#footer{
+    background-color: #000;
+    color: #FFF;
+}
+
+#footer a {
+    color: #FFF;
+}
+
+#ftRight a {
+    font-size: 34px;
+}
+
+@media (max-width: 767px) {
+    .border-right{
+        border-right: none !important;
+    }
+}
